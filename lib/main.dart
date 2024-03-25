@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       home:  MyHomePage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -33,7 +34,9 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter App'),
+        actions: [IconButton(onPressed: (){}, icon:Icon(Icons.add))],
       ),
+      
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -51,6 +54,7 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){} , child: const Icon(Icons.add),),
     );
   }
 }
