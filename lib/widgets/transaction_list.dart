@@ -24,28 +24,23 @@ class TransactionList extends StatelessWidget {
       )  : ListView.builder(
         itemBuilder: (context , index){
               return Card(
-                  child: Row(children: [
-                    Container(
-                    margin:const  EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-                    decoration: BoxDecoration(border: Border.all(color: Colors.purple, width: 2)),
-                    padding: const EdgeInsets.all(10),
-                    child: Text('\$${transaction[index].amount.toStringAsFixed(2)}', 
-                    style:const  TextStyle
-                    (
-                      fontWeight: FontWeight.bold , 
-                      fontSize: 20 , 
-                      color: Colors.purple),
-                    ), 
-                    ), 
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                      Text(transaction[index].title ,
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),), 
-                      Text(DateFormat.yMMMd().format(transaction[index].date) , style: const  TextStyle(color: Colors.grey, ),),
-                    ],)
-                  ],),
-                );
+                elevation: 5,
+                margin: EdgeInsets.symmetric(vertical: 8 ,horizontal: 5),
+                child: ListTile(
+                  
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.purple,
+                    radius: 30 ,  
+                    child: Padding(
+                    padding: const EdgeInsets.all(7),
+                    child: FittedBox(child: Text('\$${transaction[index].amount}' , style: TextStyle(color:Colors.white),  )),
+                  ),
+                  ),
+                  title: Text(transaction[index].title),
+                  subtitle: Text(DateFormat.yMMMd().format(transaction[index].date)),
+                 
+                ),
+              );
       
         },
         itemCount:transaction.length ,
