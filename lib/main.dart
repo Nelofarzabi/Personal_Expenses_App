@@ -1,6 +1,5 @@
 import 'package:expense/models/transaction.dart';
 import 'package:expense/widgets/chart.dart';
-// import 'package:expense/widgets/chart.dart';
 import 'package:expense/widgets/transaction_list.dart';
 import 'package:expense/widgets/new_transaction.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         actions: [
           IconButton(
               onPressed: () => _startAddNewTransaction(context),
-              icon: Icon(
+              icon: const Icon(
                 Icons.add,
                 color: Colors.white,
               ))

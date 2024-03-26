@@ -1,6 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
-
 class Transaction {
  final String id;
  final String title; 
@@ -13,5 +10,5 @@ class Transaction {
     required this.amount,
     required this.date,
   });
-  
+
 }

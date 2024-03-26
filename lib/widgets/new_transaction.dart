@@ -76,7 +76,7 @@ class _NewTransactionState extends State<NewTransaction> {
                   ),
                   TextButton(
                       onPressed: _presentDatePicker,
-                      child: Text(
+                      child: const Text(
                         'Chosse Date',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, color: Colors.purple),
@@ -88,7 +88,7 @@ class _NewTransactionState extends State<NewTransaction> {
               onPressed: _submitData,
               style: ElevatedButton.styleFrom(
                   primary: Color.fromARGB(255, 174, 48, 206)),
-              child: Text(
+              child: const Text(
                 'Add Transaction',
                 style: TextStyle(color: Colors.white),
               ),
