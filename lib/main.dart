@@ -105,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _startAddNewTransaction(context),
-        child: const Icon(
+        child:  Icon(
           Icons.add,
           color: Colors.white,
         ),
